@@ -4,130 +4,7 @@ Full-Duplex + Gemini + gTTS + Orquestrador de Tools + Memória Persistente
 
 Assistente virtual completo construído com Python, OpenAI e GEMINI e recursos de reconhecimento de voz.
 
----
-
-### 📦 Versão 1 - JARVIS Básico
-
-**Arquivo:** `main_v1.py`
-
-A versão mais simples do JARVIS, ideal para iniciantes entenderem os conceitos fundamentais:
-
-✨ **Funcionalidades:**
-
-- 🎤 Reconhecimento de voz via Google Speech Recognition
-- 🗣️ Síntese de voz com pyttsx3
-- 🤖 Integração com OpenAI GPT para respostas inteligentes
-- 🎚️ Calibração automática do microfone
-- 💬 Loop de conversação básico
-
-**Conceitos Aprendidos:**
-
-- Speech Recognition básico
-- Text-to-Speech local
-- API da OpenAI
-- Gerenciamento de ambiente (.env)
-
----
-
-### 🔄 Versão 2 - Full-Duplex com PyAudio
-
-
-**Arquivo:** `main_v4.py`
-
-A versão mais completa com memória entre sessões e capacidade de usar ferramentas:
-
-✨ **Funcionalidades:**
-
-- 💾 **Memória Persistente:** SQLite guarda todo o histórico
-- 👤 **Personalização:** Lembra seu nome e preferências
-- 🌅 **Saudações Contextuais:** Bom dia/tarde/noite personalizadas
-- 🛠️ **Sistema de Tools:**
-  - 🌦️ Clima em tempo real
-  - ⏰ Hora e data
-  - 🔍 Busca na web (Perplexity AI)
-  - 📁 Sistema de arquivos
-  - 💾 Gerenciamento de memória
-- 🔄 Histórico entre sessões
-- 📊 Exportação de conversas
-- 🎯 Orquestrador inteligente de ferramentas
-
-**Estrutura de Tools:**
-
-```
-tools/
-├── __init__.py
-├── README.md
-├── orquestrador_tools.py  # Gerenciador central
-├── clima.py               # API OpenWeather
-├── hora.py                # Data/hora
-├── buscar_web.py          # Perplexity AI
-├── sistema_arquivos.py    # Operações de arquivo
-└── jarvis_memoria.py      # Gerenciamento SQLite
-```
-
-**Novos Conceitos:**
-
-- Banco de dados SQLite
-- Sistema de plugins/tools
-- Function calling da OpenAI
-- Persistência de dados
-- Arquitetura modular
-
----
-
-## 🛠️ Instalação
-
-### Pré-requisitos
-
-- Python 3.8+
-- Microfone funcional
-- Chaves de API (OpenAI e opcionalmente Perplexity)
-
-### Passo a Passo
-
-1. **Clone o repositório:**
-
-```bash
-git clone https://github.com/eai-academy/jarvis-tutorial.git
-cd jarvis-tutorial
-```
-
-2. **Instale as dependências:**
-
-```bash
-pip install -r requirements.txt
-```
-
-3. **Configure as variáveis de ambiente:**
-
-Crie um arquivo `.env` na raiz do projeto:
-
-```env
-OPENAI_API_KEY=sua_chave_openai
-OPENAI_MODEL=gpt-4o-mini
-PERPLEXITY_API_KEY=sua_chave_perplexity  # Opcional (v4)
-OPENWEATHER_API_KEY=sua_chave_openweather # Opcional (v4)
-```
-
-4. **Execute a versão desejada:**
-
-
----
-
-## 📋 Dependências Principais
-
-- **openai** - API da OpenAI (GPT + TTS)
-- **SpeechRecognition** - Reconhecimento de voz
-- **pyttsx3** - Text-to-Speech local (v1-v2)
-- **PyAudio** - Captura de áudio em tempo real (v2-v4)
-- **pygame** - Controle de reprodução de áudio (v2-v4)
-- **python-dotenv** - Gerenciamento de variáveis de ambiente
-- **requests** - Requisições HTTP
-- **numpy** - Processamento de sinais de áudio
-- **perplexityai** - Busca web avançada (v4)
-
----
-
+Assistente de voz em Python com suporte a **OpenAI** e **Google Gemini**, conversação **Full-Duplex** (permite interromper a fala do assistente), **memória persistente (SQLite)** e **ferramentas integradas (Tools)**.
 ## 🎯 Como Usar
 
 ### Comandos Básicos (Todas as Versões)
@@ -146,17 +23,6 @@ OPENWEATHER_API_KEY=sua_chave_openweather # Opcional (v4)
 
 ---
 
-## 🗺️ Evolução do Projeto
-
-```
-v1: Básico
-  ↓
-v2: + Full-Duplex
-  ↓
-v3: + OpenAI TTS
-  ↓
-v4: + Memória + Tools
-```
 
 Cada versão mantém as funcionalidades da anterior e adiciona novas capacidades.
 
@@ -167,10 +33,9 @@ Cada versão mantém as funcionalidades da anterior e adiciona novas capacidades
 ```
 jarvis-tutorial/
 │
-├── main_v1.py              # Versão 1 - Básico
-├── main_v2.py              # Versão 2 - Full-Duplex
-├── main_v3.py              # Versão 3 - OpenAI TTS
-├── main_v4.py              # Versão 4 - Completa
+├── main_1.py              # Versão 1 - Básico
+├── main_2.py              # Versão 2 - Mais complets
+
 │
 ├── tools/                  # Sistema de ferramentas (v4)
 │   ├── __init__.py
@@ -263,13 +128,7 @@ Este projeto é para fins educacionais. Use livremente para aprender e criar seu
 
 ## 👨‍💻 Autor
 
-**EAI Academy**
-
 - YouTube: [EAI Academy](https://www.youtube.com/@eaiacademy)
 - GitHub: [eai-academy](https://github.com/eai-academy)
 - Modificacoes e adaptacoes para Gemini : (https://github.com/CunhaRo)
 
----
-
-
-**Divirta-se construindo seu próprio JARVIS! 🚀**
