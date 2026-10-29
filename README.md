@@ -11,12 +11,12 @@ Assistente de voz em Python com suporte a **OpenAI** e **Google Gemini**, conver
 
 - Fale naturalmente com o JARVIS
 - Diga "sair", "tchau" ou "adeus" para encerrar
-- O JARVIS responde a qualquer pergunta via GPT
+- O JARVIS responde a qualquer pergunta via LLM escolhida
 
 ### Recursos Específicos v4
 
 - **Memória:** "O que conversamos antes?"
-- **Clima:** "Como está o clima em São Paulo?"
+- **Clima:** "Como está o clima hoje?"
 - **Hora:** "Que horas são?"
 - **Busca:** "Busque informações sobre Python"
 - **Arquivos:** "Crie um arquivo teste.txt"
@@ -57,12 +57,15 @@ jarvis-tutorial/
 
 ## 🔑 Obtendo Chaves de API
 
-### OpenAI (Obrigatória)
+### OpenAI ou GEMINI (Obrigatória)
 
 1. Acesse: https://platform.openai.com/
 2. Crie uma conta
 3. Vá em "API Keys"
 4. Crie uma nova chave
+
+5. Se for Gemini Acesse o Google AI Studio: Entre no portal oficial em aistudio.google.com.
+6. GEMINI_API_KEY=AIzaSy...
 
 ### Perplexity AI (Opcional - v4)
 
